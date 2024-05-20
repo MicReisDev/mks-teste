@@ -1,8 +1,8 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { UserModule } from './User/user.module';
-import { AuthMiddleware } from './middleware/auth.middleware';
+import { AuthMiddleware } from './Middleware/auth.middleware';
 import { MovieModule } from './Movie/movie.module';
-
+import { AllRoutesMiddleware } from './Middleware/allroutes.middleware';
 
 @Module({
   imports: [UserModule, MovieModule],
@@ -11,6 +11,7 @@ import { MovieModule } from './Movie/movie.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
+    consumer.apply(AllRoutesMiddleware).forRoutes('*');
     consumer.apply(AuthMiddleware).forRoutes('movie');
   }
 }
