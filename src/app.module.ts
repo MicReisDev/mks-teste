@@ -11,7 +11,7 @@ import { AllRoutesMiddleware } from './Middleware/allroutes.middleware';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AllRoutesMiddleware).forRoutes('*');
     consumer.apply(AuthMiddleware).forRoutes('movie');
+    //consumer.apply(AllRoutesMiddleware).forRoutes('*');
   }
 }
