@@ -16,7 +16,7 @@ import { CreateUserDTO, LoginDTO } from './DTO/user.dto';
 import { UserService } from './user.service';
 import { throwError } from 'rxjs';
 import { IErrorReturn, ISuccessReturn } from 'src/DefaultTypes/IServicesDefault';
-import { ErrorReturnDto, SuccessReturnDto } from 'src/DefaultDTO/default.DTO';
+import { ErrorReturnDto, SuccessReturnDto } from 'src/DefaultDTO/Default.DTO';
 
 @ApiTags('users')
 @Controller('user')

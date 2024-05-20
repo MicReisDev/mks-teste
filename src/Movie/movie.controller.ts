@@ -16,7 +16,7 @@ import { ApiResponse, ApiTags, ApiBody, ApiBearerAuth } from '@nestjs/swagger';
 import { CreateMovieDTO, UpdateMovieDTO } from './DTO/movie.dto';
 import { IAuthUser, IErrorReturn, ISuccessReturn } from 'src/DefaultTypes/IServicesDefault';
 import { MovieService } from './movie.service'
-import { SuccessReturnDto, ErrorReturnDto } from 'src/DefaultDTO/default.DTO';
+import { SuccessReturnDto, ErrorReturnDto } from 'src/DefaultDTO/Default.DTO';
 
 @ApiTags('movie')
 @ApiBearerAuth()
